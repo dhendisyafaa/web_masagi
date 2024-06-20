@@ -3,15 +3,15 @@ import HeaderComponent from "@/components/HeaderComponent";
 import SidebarComponent from "@/components/SidebarComponent";
 import React from "react";
 
-export default function LayoutDashboard() {
+export default function LayoutDashboard({ children }) {
   return (
-    <div className="">
+    <div>
       <HeaderComponent />
-      <div className="flex w-full border">
+      <div className="flex w-full">
         <div className="hidden md:block">
           <SidebarComponent />
         </div>
-        <ContentComponent />
+        {children}
       </div>
     </div>
   );

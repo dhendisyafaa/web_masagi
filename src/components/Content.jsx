@@ -3,7 +3,7 @@ import TabComponent from "./TabComponent";
 
 export default function ContentComponent() {
   return (
-    <div className="mx-3">
+    <div className="mx-3 w-full">
       <TabComponent />
     </div>
   );

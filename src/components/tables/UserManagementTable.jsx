@@ -27,6 +27,8 @@ import {
 import { Plus } from "lucide-react";
 import Image from "next/image";
 import SearchBarComponent from "../SearchBarComponent";
+import FormCreateUser from "../form/FormCreateUser";
+import FormUpdateUser from "../form/FormUpdateUser";
 
 export default function UserManagementTable() {
   const tableHead = ["No", "User ID", "Name", "Role", "Edit"];
@@ -56,20 +58,15 @@ export default function UserManagementTable() {
       <div className="flex justify-between mb-2 gap-3">
         <SearchBarComponent />
         <Dialog>
-          <DialogTrigger>
-            <button className="flex items-center gap-2 rounded-3xl shadow-lg bg-[#99B7B9] px-3 py-2 w-fit">
-              <Plus className="text-primary bg-white rounded-full w-5 h-5 shadow-md" />
-              <p className="text-white drop-shadow-lg">Create New</p>
-            </button>
+          <DialogTrigger className="flex items-center gap-2 rounded-3xl shadow-lg bg-[#99B7B9] px-3 py-2 w-fit">
+            <Plus className="text-primary bg-white rounded-full w-5 h-5 shadow-md" />
+            <p className="text-white drop-shadow-lg">Create New</p>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Are you absolutely sure?</DialogTitle>
-              <DialogDescription>
-                This action cannot be undone. This will permanently delete your
-                account and remove your data from our servers.
-              </DialogDescription>
+              <DialogTitle>MAKE A NEW USER</DialogTitle>
             </DialogHeader>
+            <FormCreateUser />
           </DialogContent>
         </Dialog>
       </div>
@@ -126,13 +123,9 @@ export default function UserManagementTable() {
                     </DialogTrigger>
                     <DialogContent>
                       <DialogHeader>
-                        <DialogTitle>Edit this data?</DialogTitle>
-                        <DialogDescription>
-                          This action cannot be undone. This will permanently
-                          delete your account and remove your data from our
-                          servers.
-                        </DialogDescription>
+                        <DialogTitle>EDIT USER</DialogTitle>
                       </DialogHeader>
+                      <FormUpdateUser />
                     </DialogContent>
                   </Dialog>
                   <Dialog>

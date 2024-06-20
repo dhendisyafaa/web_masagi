@@ -27,6 +27,8 @@ import {
 import { Plus } from "lucide-react";
 import Image from "next/image";
 import SearchBarComponent from "../SearchBarComponent";
+import FormCreateDashboard from "../form/FormCreateDashboard";
+import FormUpdateDashboard from "../form/FormUpdateDashboard";
 
 export default function DashboardManagementTable() {
   const tableHead = [
@@ -62,20 +64,15 @@ export default function DashboardManagementTable() {
       <div className="flex justify-between mb-2 gap-3">
         <SearchBarComponent />
         <Dialog>
-          <DialogTrigger>
-            <button className="flex items-center gap-2 rounded-3xl shadow-lg bg-[#99B7B9] px-3 py-2 w-fit">
-              <Plus className="text-primary bg-white rounded-full w-5 h-5 shadow-md" />
-              <p className="text-white drop-shadow-lg">Create New</p>
-            </button>
+          <DialogTrigger className="flex items-center gap-2 rounded-3xl shadow-lg bg-[#99B7B9] px-3 py-2 w-fit">
+            <Plus className="text-primary bg-white rounded-full w-5 h-5 shadow-md" />
+            <p className="text-white drop-shadow-lg">Create New</p>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Are you absolutely sure?</DialogTitle>
-              <DialogDescription>
-                This action cannot be undone. This will permanently delete your
-                account and remove your data from our servers.
-              </DialogDescription>
+              <DialogTitle>MAKE A NEW DASHBOARD</DialogTitle>
             </DialogHeader>
+            <FormCreateDashboard />
           </DialogContent>
         </Dialog>
       </div>
@@ -132,13 +129,9 @@ export default function DashboardManagementTable() {
                     </DialogTrigger>
                     <DialogContent>
                       <DialogHeader>
-                        <DialogTitle>Edit this data?</DialogTitle>
-                        <DialogDescription>
-                          This action cannot be undone. This will permanently
-                          delete your account and remove your data from our
-                          servers.
-                        </DialogDescription>
+                        <DialogTitle>EDIT DASHBOARD</DialogTitle>
                       </DialogHeader>
+                      <FormUpdateDashboard />
                     </DialogContent>
                   </Dialog>
                   <Dialog>

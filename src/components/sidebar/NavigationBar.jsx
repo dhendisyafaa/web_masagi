@@ -1,13 +1,19 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 export default function NavigationBar() {
+  const pathname = usePathname();
+  console.log("🚀 ~ NavigationBar ~ pathname:", pathname);
   return (
     <div className="flex flex-col gap-3">
-      <div
+      <Link
+        href="/"
         className={cn(
-          "bg-primary hover:bg-[#D0DEDF]/50 cursor-pointer flex gap-2 text-white items-center text-xl duration-150 rounded-tl-xl rounded-bl-xl p-2"
+          "hover:bg-[#D0DEDF]/50 cursor-pointer flex gap-2 text-white items-center text-xl duration-150 rounded-tl-xl rounded-bl-xl p-2",
+          pathname === "/" ? "bg-[#D0DEDF]/50" : "bg-primary"
         )}
       >
         <Image
@@ -17,10 +23,12 @@ export default function NavigationBar() {
           alt="account-settings-logo"
         />
         <p>Account & Role Settings</p>
-      </div>
-      <div
+      </Link>
+      <Link
+        href="/connection-settings"
         className={cn(
-          "bg-primary hover:bg-[#D0DEDF]/50 cursor-pointer flex gap-2 text-white items-center text-xl duration-150 rounded-tl-xl rounded-bl-xl p-2"
+          "bg-primary hover:bg-[#D0DEDF]/50 cursor-pointer flex gap-2 text-white items-center text-xl duration-150 rounded-tl-xl rounded-bl-xl p-2",
+          pathname === "/connection-settings" ? "bg-[#D0DEDF]/50" : "bg-primary"
         )}
       >
         <Image
@@ -30,7 +38,7 @@ export default function NavigationBar() {
           alt="account-settings-logo"
         />
         <p>Connection Settings</p>
-      </div>
+      </Link>
     </div>
   );
 }
