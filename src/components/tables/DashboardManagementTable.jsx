@@ -65,8 +65,10 @@ export default function DashboardManagementTable() {
         <SearchBarComponent />
         <Dialog>
           <DialogTrigger className="flex items-center gap-2 rounded-3xl shadow-lg bg-[#99B7B9] px-3 py-2 w-fit">
-            <Plus className="text-primary bg-white rounded-full w-5 h-5 shadow-md" />
-            <p className="text-white drop-shadow-lg">Create New</p>
+            <Plus className="hidden md:block text-primary bg-white rounded-full w-5 h-5 shadow-md" />
+            <p className="text-xs md:text-base text-white drop-shadow-lg">
+              Create New
+            </p>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>

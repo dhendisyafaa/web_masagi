@@ -6,7 +6,7 @@ import React from "react";
 
 export default function NavigationBar() {
   const pathname = usePathname();
-  console.log("🚀 ~ NavigationBar ~ pathname:", pathname);
+
   return (
     <div className="flex flex-col gap-3">
       <Link

@@ -17,17 +17,17 @@ export default function HeaderComponent() {
         src={"/assets/img/logo.png"}
         width={200}
         height={200}
-        className="hidden md:block"
+        className="hidden lg:block"
         alt="logo"
       />
       {/* <Image
         src={"/assets/img/logo-small.png"}
         width={50}
         height={50}
-        className="md:hidden"
+        className="lg:hidden"
         alt="logo"
       /> */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <Sheet>
           <SheetTrigger>
             <Menu className="text-primary" />
