@@ -1,3 +1,4 @@
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -48,7 +49,7 @@ export default function HeaderComponent() {
               alt="notification"
             />
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-60 h-44 items-end flex">
+          <DropdownMenuContent className="w-60 h-44 items-end flex bg-[#D0DEDF] mt-0">
             <div className="border-t-2 border-primary w-full text-end p-1">
               <p className="text-[10px]">Mark all as read</p>
             </div>
@@ -56,18 +57,15 @@ export default function HeaderComponent() {
         </DropdownMenu>
         <DropdownMenu>
           <DropdownMenuTrigger>
-            <div className="flex items-center gap-2">
-              <Image
-                src="/assets/img/avatar.png"
-                width={40}
-                height={40}
-                alt="user-avatar"
-                className="rounded-full shadow-inner"
-              />
-              <ChevronDown className="text-primary" />
+            <div className="flex items-center gap-1">
+              <Avatar>
+                <AvatarImage src="/assets/img/avatar.png" />
+                <AvatarFallback>M</AvatarFallback>
+              </Avatar>
+              <ChevronDown className="text-primary h-5 w-5" />
             </div>
           </DropdownMenuTrigger>
-          <DropdownMenuContent>
+          <DropdownMenuContent className="bg-[#D0DEDF] mt-0">
             <DropdownMenuItem>Settings</DropdownMenuItem>
             <DropdownMenuItem>Logout</DropdownMenuItem>
           </DropdownMenuContent>

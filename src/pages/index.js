@@ -7,8 +7,10 @@ const leagueSpartan = League_Spartan({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <LayoutDashboard>
-      <ContentComponent />
-    </LayoutDashboard>
+    <div className={leagueSpartan.className}>
+      <LayoutDashboard>
+        <ContentComponent />
+      </LayoutDashboard>
+    </div>
   );
 }

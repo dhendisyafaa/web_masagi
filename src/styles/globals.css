@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -74,4 +76,15 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.icon-search {
+  background: url("/assets/svg/search.svg") no-repeat right;
+  background-size: 20px;
+}
+
+.coda-extrabold {
+  font-family: "Coda", system-ui;
+  font-weight: 800;
+  font-style: normal;
 }
