@@ -21,7 +21,7 @@ export default function SearchBarComponent() {
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="flex flex-col gap-2 md:-mt-14 -mt-10">
-        <Input className="" />
+        <Input className="w-40 md:w-[525px]" />
         <div className="w-40 md:w-[525px] rounded-xl h-44 items-end flex bg-[#D0DEDF]"></div>
       </DropdownMenuContent>
     </DropdownMenu>

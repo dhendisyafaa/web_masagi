@@ -29,6 +29,7 @@ import Image from "next/image";
 import SearchBarComponent from "../SearchBarComponent";
 import FormCreateGroup from "../form/FormCreateGroup";
 import FormUpdateGroup from "../form/FormUpdateGroup";
+import DialogDelete from "../dialog/DialogDelete";
 
 export default function GrupManagementTable() {
   const tableHead = ["No", "Group ID", "Group Name", "Role", "Edit"];
@@ -130,28 +131,7 @@ export default function GrupManagementTable() {
                       <FormUpdateGroup />
                     </DialogContent>
                   </Dialog>
-                  <Dialog>
-                    <DialogTrigger>
-                      <Image
-                        src="/assets/svg/delete.svg"
-                        height={25}
-                        width={25}
-                        alt="delete"
-                      />
-                    </DialogTrigger>
-                    <DialogContent>
-                      <DialogHeader>
-                        <DialogTitle>
-                          Are you absolutely sure delete this data?
-                        </DialogTitle>
-                        <DialogDescription>
-                          This action cannot be undone. This will permanently
-                          delete your account and remove your data from our
-                          servers.
-                        </DialogDescription>
-                      </DialogHeader>
-                    </DialogContent>
-                  </Dialog>
+                  <DialogDelete />
                 </div>
               </TableCell>
             </TableRow>

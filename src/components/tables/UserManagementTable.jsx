@@ -29,6 +29,7 @@ import Image from "next/image";
 import SearchBarComponent from "../SearchBarComponent";
 import FormCreateUser from "../form/FormCreateUser";
 import FormUpdateUser from "../form/FormUpdateUser";
+import DialogDelete from "../dialog/DialogDelete";
 
 export default function UserManagementTable() {
   const tableHead = ["No", "User ID", "Name", "Role", "Edit"];
@@ -60,7 +61,9 @@ export default function UserManagementTable() {
         <Dialog>
           <DialogTrigger className="flex items-center gap-2 rounded-3xl shadow-lg bg-[#99B7B9] px-3 py-2 w-fit">
             <Plus className="hidden md:block text-primary bg-white rounded-full w-5 h-5 shadow-md" />
-            <p className="text-xs md:text-base text-white drop-shadow-lg">Create New</p>
+            <p className="text-xs md:text-base text-white drop-shadow-lg">
+              Create New
+            </p>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
@@ -128,28 +131,7 @@ export default function UserManagementTable() {
                       <FormUpdateUser />
                     </DialogContent>
                   </Dialog>
-                  <Dialog>
-                    <DialogTrigger>
-                      <Image
-                        src="/assets/svg/delete.svg"
-                        height={25}
-                        width={25}
-                        alt="delete"
-                      />
-                    </DialogTrigger>
-                    <DialogContent>
-                      <DialogHeader>
-                        <DialogTitle>
-                          Are you absolutely sure delete this data?
-                        </DialogTitle>
-                        <DialogDescription>
-                          This action cannot be undone. This will permanently
-                          delete your account and remove your data from our
-                          servers.
-                        </DialogDescription>
-                      </DialogHeader>
-                    </DialogContent>
-                  </Dialog>
+                  <DialogDelete />
                 </div>
               </TableCell>
             </TableRow>
