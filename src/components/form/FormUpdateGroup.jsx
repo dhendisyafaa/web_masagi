@@ -8,15 +8,15 @@ export default function FormUpdateGroup() {
     <div className="px-3 flex flex-col gap-5">
       <div className="flex flex-col gap-2">
         <Label htmlFor="userId">User ID</Label>
-        <Input id="userId" defaultValue="The New One" className="rounded-2xl" />
+        <Input id="userId" defaultValue="The New One" className="rounded-2xl" bgColor="bg-white" />
       </div>
       <div className="flex flex-col gap-2">
         <Label htmlFor="name">Name</Label>
-        <Input id="name" defaultValue="The New One" className="rounded-2xl" />
+        <Input id="name" defaultValue="The New One" className="rounded-2xl" bgColor="bg-white" />
       </div>
       <div className="flex flex-col gap-2">
         <Label htmlFor="role">Role</Label>
-        <Input id="role" defaultValue="The New One" className="rounded-2xl" />
+        <Input id="role" defaultValue="The New One" className="rounded-2xl" bgColor="bg-white" />
       </div>
       <div className="my-3 flex justify-end">
         <button

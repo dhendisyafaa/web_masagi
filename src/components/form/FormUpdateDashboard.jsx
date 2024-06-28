@@ -12,6 +12,7 @@ export default function FormUpdateDashboard() {
           id="dashboardId"
           defaultValue="The New One"
           className="rounded-2xl"
+          bgColor="bg-white"
         />
       </div>
       <div className="flex flex-col gap-2">
@@ -20,6 +21,7 @@ export default function FormUpdateDashboard() {
           id="groupAccess"
           defaultValue="The New One"
           className="rounded-2xl"
+          bgColor="bg-white"
         />
       </div>
       <div className="flex flex-col gap-2">
@@ -28,6 +30,7 @@ export default function FormUpdateDashboard() {
           id="lastUpdated"
           defaultValue="The New One"
           className="rounded-2xl"
+          bgColor="bg-white"
         />
       </div>
       <div className="my-3 flex justify-end">

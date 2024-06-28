@@ -8,15 +8,30 @@ export default function FormCreateUser() {
     <div className="px-3 flex flex-col gap-5">
       <div className="flex flex-col gap-2">
         <Label htmlFor="userId">User ID</Label>
-        <Input id="userId" placeholder="The New One" className="rounded-2xl" />
+        <Input
+          id="userId"
+          placeholder="The New One"
+          className="rounded-2xl"
+          bgColor="bg-white"
+        />
       </div>
       <div className="flex flex-col gap-2">
         <Label htmlFor="name">Name</Label>
-        <Input id="name" placeholder="The New One" className="rounded-2xl" />
+        <Input
+          id="name"
+          placeholder="The New One"
+          className="rounded-2xl"
+          bgColor="bg-white"
+        />
       </div>
       <div className="flex flex-col gap-2">
         <Label htmlFor="role">Role</Label>
-        <Input id="role" placeholder="The New One" className="rounded-2xl" />
+        <Input
+          id="role"
+          placeholder="The New One"
+          className="rounded-2xl"
+          bgColor="bg-white"
+        />
       </div>
       <div className="my-3 flex justify-end">
         <button

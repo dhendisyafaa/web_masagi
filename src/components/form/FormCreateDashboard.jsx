@@ -11,7 +11,7 @@ export default function FormCreateDashboard() {
         <Input
           id="dashboardId"
           placeholder="The New One"
-          className="rounded-2xl"
+          className="rounded-2xl" bgColor="bg-white"
         />
       </div>
       <div className="flex flex-col gap-2">
@@ -19,7 +19,7 @@ export default function FormCreateDashboard() {
         <Input
           id="groupAccess"
           placeholder="The New One"
-          className="rounded-2xl"
+          className="rounded-2xl" bgColor="bg-white"
         />
       </div>
       <div className="flex flex-col gap-2">
@@ -27,7 +27,7 @@ export default function FormCreateDashboard() {
         <Input
           id="lastUpdated"
           placeholder="The New One"
-          className="rounded-2xl"
+          className="rounded-2xl" bgColor="bg-white"
         />
       </div>
       <div className="my-3 flex justify-end">

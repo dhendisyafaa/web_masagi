@@ -8,15 +8,30 @@ export default function FormCreateGroup() {
     <div className="px-3 flex flex-col gap-5">
       <div className="flex flex-col gap-2">
         <Label htmlFor="groupId">Group ID</Label>
-        <Input id="groupId" placeholder="The New One" className="rounded-2xl" />
+        <Input
+          id="groupId"
+          placeholder="The New One"
+          className="rounded-2xl"
+          bgColor="bg-white"
+        />
       </div>
       <div className="flex flex-col gap-2">
         <Label htmlFor="name">Name</Label>
-        <Input id="name" placeholder="The New One" className="rounded-2xl" />
+        <Input
+          id="name"
+          placeholder="The New One"
+          className="rounded-2xl"
+          bgColor="bg-white"
+        />
       </div>
       <div className="flex flex-col gap-2">
         <Label htmlFor="role">Role</Label>
-        <Input id="role" placeholder="The New One" className="rounded-2xl" />
+        <Input
+          id="role"
+          placeholder="The New One"
+          className="rounded-2xl"
+          bgColor="bg-white"
+        />
       </div>
       <div className="my-3 flex justify-end">
         <button
